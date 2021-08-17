@@ -1,0 +1,5 @@
+aiofiles==0.7.0
+aiologger==0.6.1
+Flask==2.0.1
+flask-restx==0.5.0
+pysolr==3.9.0

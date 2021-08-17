@@ -1,0 +1,23 @@
+version: "3"
+services: 
+  sis_api:
+    build: 
+      context: sis_api
+      dockerfile: Dockerfile
+    networks: 
+      - backend
+    ports: 
+      - 5000:5000
+    volumes: 
+      - ./logs/:/code/logs
+  solr:
+    build: 
+      context: solr
+      dockerfile: Dockerfile
+    networks: 
+      - backend
+    ports: 
+      - 8983:8983
+networks:
+  backend:
+    driver: bridge
