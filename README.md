@@ -33,7 +33,7 @@ Complete URL: http://localhost:5000/search
 Request body:
 ```json
 {
-    "search_for": "this words"
+    "search_for": "these words"
 }
 ```
 
