@@ -9,11 +9,9 @@ from aiologger.handlers.files import AsyncFileHandler
 def log_config(logger):
     file_handler = AsyncFileHandler("/code/logs/sis.log")
     stream_handler = AsyncStreamHandler(level=INFO)
-
     formatter = Formatter("%(asctime)s : %(levelname)s : %(message)s")
     file_handler.formatter = formatter
     stream_handler.formatter = formatter
-
     logger.add_handler(file_handler)
     logger.add_handler(stream_handler)
 
